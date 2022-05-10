@@ -32,7 +32,7 @@
                         
                         <a class="btn btn-primary" href="{{ path('app_admin_stay') }}">back to list</a>
                         {% if stay.id %}
-                        <a class="btn btn-danger" href="{{path('admin_ads_delete',{'id': stay.id})}}" onclick="beforeRemove()"><i class="fas fa-trash"></i> delete</a>
+                        <a class="btn btn-danger" href="{{path('admin_ads_delete',{'stay': stay.id})}}" onclick="beforeRemove()"><i class="fas fa-trash"></i> delete</a>
                         {% endif %}
                     </div>
                 </div>

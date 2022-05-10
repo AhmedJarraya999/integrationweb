@@ -139,7 +139,7 @@ class __TwigTemplate_21fb4a35f779c0807bcb7271d81bc36b6c0a6274f12f22538f2ac7ad74e
         if (twig_get_attribute($this->env, $this->source, (isset($context["stay"]) || array_key_exists("stay", $context) ? $context["stay"] : (function () { throw new RuntimeError('Variable "stay" does not exist.', 34, $this->source); })()), "id", [], "any", false, false, false, 34)) {
             // line 35
             echo "                        <a class=\"btn btn-danger\" href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_ads_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["stay"]) || array_key_exists("stay", $context) ? $context["stay"] : (function () { throw new RuntimeError('Variable "stay" does not exist.', 35, $this->source); })()), "id", [], "any", false, false, false, 35)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_ads_delete", ["stay" => twig_get_attribute($this->env, $this->source, (isset($context["stay"]) || array_key_exists("stay", $context) ? $context["stay"] : (function () { throw new RuntimeError('Variable "stay" does not exist.', 35, $this->source); })()), "id", [], "any", false, false, false, 35)]), "html", null, true);
             echo "\" onclick=\"beforeRemove()\"><i class=\"fas fa-trash\"></i> delete</a>
                         ";
         }
@@ -454,7 +454,7 @@ class __TwigTemplate_21fb4a35f779c0807bcb7271d81bc36b6c0a6274f12f22538f2ac7ad74e
                         
                         <a class=\"btn btn-primary\" href=\"{{ path('app_admin_stay') }}\">back to list</a>
                         {% if stay.id %}
-                        <a class=\"btn btn-danger\" href=\"{{path('admin_ads_delete',{'id': stay.id})}}\" onclick=\"beforeRemove()\"><i class=\"fas fa-trash\"></i> delete</a>
+                        <a class=\"btn btn-danger\" href=\"{{path('admin_ads_delete',{'stay': stay.id})}}\" onclick=\"beforeRemove()\"><i class=\"fas fa-trash\"></i> delete</a>
                         {% endif %}
                     </div>
                 </div>
