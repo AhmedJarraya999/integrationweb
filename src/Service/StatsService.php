@@ -13,9 +13,11 @@ class StatsService
     private $stayRepository;
     private $experiencesRepository;
 
-    public function __construct(EntityManagerInterface $manager,
-     StayRepository $stayRepository, ExperienceRepository $experiencesRepository )
-    {
+    public function __construct(
+        EntityManagerInterface $manager,
+        StayRepository $stayRepository,
+        ExperienceRepository $experiencesRepository
+    ) {
         $this->manager = $manager;
         $this->stayRepository = $stayRepository;
         $this->experiencesRepository = $experiencesRepository;
@@ -52,5 +54,4 @@ class StatsService
     {
         return $this->manager->createQuery('SELECT COUNT(c) FROM App\Entity\Comment c')->getSingleScalarResult();
     }
-
 }
